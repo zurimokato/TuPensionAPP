@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Main2Activity"
+    android:background="@color/fondoList"
+    tools:showIn="@layout/activity_main2">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card"
+                android:layout_width="334dp"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                card_view:cardBackgroundColor="@color/cardview_light_background"
+                card_view:cardCornerRadius="4dp"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/relativ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageP"
+                        android:layout_width="334dp"
+                        android:layout_height="194dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:contentDescription="@string/todo"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_launcher_background" />
+
+                    <TextView
+                        android:id="@+id/nomP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageP"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/nombre_pension"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/text_primary"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/ratingCalif"
+                        style="?attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/nomP"
+                        android:layout_below="@+id/nomP" />
+
+                    <TextView
+                        android:id="@+id/textCalific"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nomP"
+                        android:layout_marginEnd="4dp"
+                        android:layout_toEndOf="@+id/ratingCalif"
+                        android:text="@string/ratingText"
+                        android:textColor="@color/colorSecundaryTetxt"
+                        android:textSize="@dimen/text_teciary" />
+
+                    <TextView
+                        android:id="@+id/textDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/nomP"
+                        android:layout_below="@+id/ratingCalif"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/descripcion"
+                        android:textColor="@color/colorSecundaryTetxt"
+                        android:textSize="@dimen/text_secundary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textDescripcion"
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/nomP"
+                        android:layout_below="@id/textDesc"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/ejempDes" />
+
+                    <TextView
+                        android:id="@+id/textTipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/nomP"
+                        android:layout_below="@+id/divider"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/tipo_pension"
+                        android:textColor="@color/colorSecundaryTetxt"
+                        android:textSize="@dimen/text_secundary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtPrecio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/textTipo"
+                        android:layout_marginEnd="94dp"
+                        android:text="@string/precio"
+                        android:textColor="@color/colorSecundaryTetxt"
+                        android:textSize="@dimen/text_secundary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtPrecioNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/textTipo"
+                        android:layout_marginEnd="24dp"
+                        android:text="@string/precio"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_secundary"
+                        android:textStyle="bold" />
+
+                    <com.adroitandroid.chipcloud.ChipCloud xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/chips"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_below="@+id/textTipo"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        chipcloud:allCaps="true"
+                        chipcloud:deselectTransitionMS="500"
+                        chipcloud:deselectedColor="@color/deselected_color"
+                        chipcloud:deselectedFontColor="@color/deselected_font_color"
+                        chipcloud:gravity="staggered"
+                        chipcloud:selectMode="required"
+                        chipcloud:selectTransitionMS="750"
+                        chipcloud:selectedColor="@color/selected_color"
+                        chipcloud:selectedFontColor="@color/selected_font_color"
+                        chipcloud:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/chips"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/textTipo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tipo_pension"
+                            android:textColor="@color/colorSecundaryTetxt"
+                            android:textSize="@dimen/text_secundary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtPrecio2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="66dp"
+                            android:text="@string/precio"
+                            android:textColor="@color/colorSecundaryTetxt"
+                            android:textSize="@dimen/text_secundary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtPrecioNum2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignTop="@+id/textTipo2"
+                            android:text="@string/precio"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_secundary"
+                            android:textStyle="bold" />
+
+                        <com.adroitandroid.chipcloud.ChipCloud xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/chips2"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_below="@+id/textTipo2"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="4dp"
+                            chipcloud:allCaps="true"
+                            chipcloud:deselectTransitionMS="500"
+                            chipcloud:deselectedColor="@color/deselected_color"
+                            chipcloud:deselectedFontColor="@color/deselected_font_color"
+                            chipcloud:gravity="staggered"
+                            chipcloud:selectMode="required"
+                            chipcloud:selectTransitionMS="750"
+                            chipcloud:selectedColor="@color/selected_color"
+                            chipcloud:selectedFontColor="@color/selected_font_color"
+                            chipcloud:textSize="14sp" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        style="@style/Divider"
+                        android:layout_below="@+id/textDescripcion" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/nomP"
+                        android:layout_marginEnd="120dp"
+                        android:text="@string/direccion"
+                        android:textColor="@color/colorSecundaryTetxt"
+                        android:textSize="@dimen/text_secundary" />
+
+                    <TextView
+                        android:id="@+id/direccionPe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/ratingCalif"
+                        android:layout_alignEnd="@+id/textDescripcion"
+                        android:textColor="@color/colorSecundaryTetxt"
+                        android:textSize="@dimen/text_secundary" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardmap"
+                android:layout_width="334dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="4dp">
+
+                <fragment
+                    android:id="@+id/pensionesUbMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="234dp"
+                    tools:context=".Main2Activity" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardContacto"
+                android:layout_width="334dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardmap"
+                android:layout_marginTop="10dp"
+                android:background="@color/cardview_light_background"
+                android:elevation="3dp"
+
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/person_photo"
+                        android:layout_width="108dp"
+                        android:layout_height="108dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/photo"
+                        android:contentDescription="@string/todo" />
+
+                    <TextView
+                        android:id="@+id/person_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/person_photo"
+                        android:text="@string/nombre_pension"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/text_primary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/person_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/person_name"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/person_photo"
+                        android:text="@string/email"
+                        android:textColor="@color/colorSecundaryTetxt"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/person_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/person_email"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/person_photo"
+                        android:text="@string/number"
+                        android:textColor="@color/colorSecundaryTetxt"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/person_number"
+                        android:textSize="14sp"
+                        android:textColor="@color/indigo"
+                        android:layout_toEndOf="@+id/person_photo"
+                        android:text="@string/contactar"
+                        android:theme="@style/MiFlatBoton" />
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MiPension</string>
+    <string name="action_settings">Settings</string>
+    <string name="nombre_pension">Nombre:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="usuario">Usuario:</string>
+    <string name="comentario">Comentario:</string>
+    <string name="persona_encargada">Persona encargada:</string>
+    <string name="telefono">telefono</string>
+    <string name="google_key">AIzaSyDlKT96E38cPeMoIyrhUfU-w2dBbupgtWs</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Info</string>
+    <string name="ratingText">4.3</string>
+    <string name="descripcion">Descripcion:</string>
+    <string name="ejempDes">Se aceptan pensionados preferiblemente universitarios (as), ciudad del sol 2. ( Por Cupos) cerca a las universidades; sergio arboleda, uan, ucc, unimag</string>
+    <string name="tipo_pension">Tipo</string>
+    <string name="precio">Precio:</string>
+    <string name="email">Email:</string>
+    <string name="number">Telefono: +57 3245572020</string>
+    <string name="contactar">Llamar</string>
+    <string name="todo">TODO</string>
+
+</resources>
